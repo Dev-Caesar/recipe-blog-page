@@ -38,4 +38,4 @@
 
 
 - GitHub [@dev_caesar](https://{github.com/dev_caesar})
-- Twitter [@your-twitter](https://{twitter.com/dev-caesar})
+- Twitter [@dev_caesar](https://{twitter.com/dev-caesar})
