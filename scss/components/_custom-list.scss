@@ -1,0 +1,30 @@
+.instruction {
+  ol {
+    list-style-type: none;
+    counter-reset: my-awesome-counter;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+  li {
+    counter-increment: my-awesome-counter;
+    padding-bottom: 4rem;
+    display: grid;
+    grid-template-columns: min-content auto;
+    gap: 1.5rem;
+  }
+  li::before {
+    content: counter(my-awesome-counter);
+    color: $white;
+    font-family: $font-heading;
+    font-size: 2.4rem;
+    font-weight: 700;
+    background-color: $accent-color;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 10%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+}

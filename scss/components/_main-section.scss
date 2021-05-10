@@ -1,0 +1,104 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  @include media-md {
+    width: 85%;
+    margin: 0 auto;
+  }
+  @include media-lg {
+    width: 70%;
+    margin: 0 auto;
+  }
+  @include media-xl {
+    max-width: 190rem;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include media-md {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .recipe__timing {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    column-gap: 4.4rem;
+    row-gap: 2rem;
+    width: calc(min(90vw, 45rem));
+    margin-bottom: 3rem;
+    > * {
+      display: grid;
+      grid-template-columns: min-content auto;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    @media (min-width: 37.5em) {
+      background-color: $white;
+      border-radius: 1.2rem;
+      padding: 2.4rem 3rem;
+      box-shadow: 0 0 20px 0 #0000001a;
+    }
+
+    @include media-md {
+      display: flex;
+      align-self: flex-start;
+      flex-direction: column;
+      width: 25%;
+      max-width: 22rem;
+      order: 2;
+      padding: 5.7rem 4.5rem 5rem;
+      > * {
+        margin-bottom: 2rem;
+      }
+    }
+    .recipe__yields {
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+    .recipe__prep-time {
+      grid-column: 1/2;
+      grid-row: 2/-1;
+    }
+    .recipe__cook-time {
+      grid-column: 2/3;
+      grid-row: 2/-1;
+    }
+    .recipe__total-time {
+      grid-column: -2/-1;
+      grid-row: 2/-1;
+    }
+    @include media-md {
+      .recipe__yields,
+      .recipe__prep-time,
+      .recipe__cook-time,
+      .recipe__total-time {
+        display: grid;
+        grid-template-columns: min-content auto;
+        gap: 1rem;
+      }
+    }
+  }
+}
+
+.recipe {
+  align-self: center;
+  @include media-md {
+    width: 60%;
+    order: 1;
+  }
+  .recipe__name {
+    margin-bottom: 2.4rem;
+  }
+
+  &__1,
+  &__2 {
+    margin-bottom: 3.9rem;
+  }
+}

@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  margin: 3.2rem 0 2.4rem;
+  @include media-md {
+    margin: 4rem 0 3.8rem;
+  }
+  @include media-lg {
+    margin: 5.2rem 0 4.8rem;
+  }
+
+  &__description {
+    display: flex;
+    gap: 1.2rem;
+    width: calc(min(90vw, 62rem));
+    margin-bottom: 1.3rem;
+    @include media-md {
+      margin-bottom: 2rem;
+    }
+    @include media-lg {
+      margin-bottom: 4.3rem;
+    }
+  }
+  &__text {
+    font-size: clamp(1.2rem, 1.1143 + 0.2679vw, 1.4rem);
+    line-height: 1.26;
+    font-style: italic;
+    color: $primary-color;
+  }
+  img {
+    height: auto;
+    width: 100%;
+    display: block;
+    border-radius: 1.2rem;
+  }
+}

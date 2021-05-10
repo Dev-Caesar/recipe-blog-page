@@ -1,0 +1,28 @@
+// Mixin declarations
+
+@mixin font-face($font-name, $font-path, $font-weight: 400, $font-style: normal) {
+  @font-face {
+    font-family: $font-name;
+    font-style: $font-style;
+    font-weight: $font-weight;
+    src: url("#{$font-path}.woff") format("woff"), url("#{$font-path}.woff2") format("woff2");
+    font-display: swap;
+  }
+}
+@mixin media-md {
+  @media (min-width: 48em) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media (min-width: 62.5em) {
+    @content;
+  }
+}
+
+@mixin media-xl {
+  @media (min-width: 87.5em) {
+    @content;
+  }
+}
